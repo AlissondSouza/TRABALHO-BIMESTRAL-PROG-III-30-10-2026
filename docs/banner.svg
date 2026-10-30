@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Lembretes dos Ancestrais">
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1410"/>
+      <stop offset="0.5" stop-color="#0A0C0F"/>
+      <stop offset="1" stop-color="#160B09"/>
+    </linearGradient>
+    <radialGradient id="radiant" cx="0.12" cy="0.85" r="0.55">
+      <stop offset="0" stop-color="#8FD15B" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8FD15B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dire" cx="0.9" cy="0.15" r="0.55">
+      <stop offset="0" stop-color="#E0472F" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#E0472F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rio" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3A7BBF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#3A7BBF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3A7BBF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ouro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3DDA4"/>
+      <stop offset="0.55" stop-color="#C9A45C"/>
+      <stop offset="1" stop-color="#8A6A2F"/>
+    </linearGradient>
+    <linearGradient id="emblema" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0472F"/>
+      <stop offset="1" stop-color="#7A1E12"/>
+    </linearGradient>
+    <linearGradient id="linha" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9A45C" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#C9A45C"/>
+      <stop offset="1" stop-color="#C9A45C" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="brilho" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#fundo)"/>
+  <rect width="1200" height="340" fill="url(#radiant)"/>
+  <rect width="1200" height="340" fill="url(#dire)"/>
+
+  <!-- rio cortando o mapa na diagonal -->
+  <path d="M-40 360 C 300 250, 520 230, 640 170 S 980 60, 1240 -20" stroke="url(#rio)" stroke-width="46" fill="none"/>
+
+  <!-- runas espalhadas -->
+  <g fill="#C9A45C" opacity="0.5">
+    <path d="M90 60 l6 10 -6 10 -6 -10z"/>
+    <path d="M1110 280 l6 10 -6 10 -6 -10z"/>
+    <path d="M300 300 l4 7 -4 7 -4 -7z"/>
+    <path d="M930 40 l4 7 -4 7 -4 -7z"/>
+  </g>
+  <g fill="#8FD15B" opacity="0.7"><circle cx="160" cy="250" r="3"/><circle cx="210" cy="280" r="2"/><circle cx="120" cy="300" r="2"/></g>
+  <g fill="#E0472F" opacity="0.8"><circle cx="1040" cy="70" r="3"/><circle cx="1090" cy="110" r="2"/><circle cx="1000" cy="40" r="2"/></g>
+
+  <!-- moldura dourada -->
+  <rect x="14" y="14" width="1172" height="312" fill="none" stroke="#C9A45C" stroke-opacity="0.35"/>
+  <path d="M14 44 V14 H44 M1156 14 H1186 V44 M1186 296 V326 H1156 M44 326 H14 V296" fill="none" stroke="#C9A45C" stroke-width="3"/>
+
+  <!-- emblema -->
+  <g transform="translate(548 34)" filter="url(#brilho)">
+    <path d="M10 6 L94 6 L98 10 L98 94 L94 98 L10 98 L6 94 L6 10 Z" fill="url(#emblema)" stroke="#C9A45C" stroke-width="2"/>
+    <path d="M22 20 L40 20 L84 78 L84 84 L66 84 L20 26 Z" fill="#0A0C0F"/>
+    <path d="M20 60 L38 84 L20 84 Z" fill="#0A0C0F"/>
+    <path d="M66 20 L84 20 L84 44 Z" fill="#0A0C0F"/>
+  </g>
+
+  <text x="600" y="200" text-anchor="middle" font-family="Cinzel, 'Trajan Pro', Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="4" fill="url(#ouro)">LEMBRETES DOS ANCESTRAIS</text>
+  <rect x="330" y="218" width="540" height="2" fill="url(#linha)"/>
+  <text x="600" y="252" text-anchor="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="6" fill="#D9D4C7">GERENCIE SUAS MISSÕES ANTES QUE A ANCIENT CAIA</text>
+  <text x="600" y="296" text-anchor="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="5" fill="#8B919B">UMFG · PROGRAMAÇÃO III · .NET 8 · MYSQL · JAVASCRIPT</text>
+
+  <text x="44" y="306" font-family="'Barlow Condensed', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#8FD15B">RADIANT</text>
+  <text x="1156" y="46" text-anchor="end" font-family="'Barlow Condensed', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#E0472F">DIRE</text>
+</svg>
