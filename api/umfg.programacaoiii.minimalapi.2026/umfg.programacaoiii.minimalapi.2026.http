@@ -1,0 +1,20 @@
+@umfg.programacaoiii.minimalapi._2026_HostAddress = http://localhost:5207
+
+GET {{umfg.programacaoiii.minimalapi._2026_HostAddress}}/lembretes
+Accept: application/json
+
+###
+
+GET {{umfg.programacaoiii.minimalapi._2026_HostAddress}}/lembretes/filtro?NumeroPagina=1&TamanhoPagina=10&Ordem=DataCadastro&Direcao=DESC&Descricao=&DataCadastroInicial=1900-01-01&DataCadastroFinal=2999-12-31&DataAtualizacaoInicial=1900-01-01&DataAtualizacaoFinal=2999-12-31
+Accept: application/json
+
+###
+
+POST {{umfg.programacaoiii.minimalapi._2026_HostAddress}}/lembretes
+Content-Type: application/json
+
+{
+  "descricao": "Comprar Black King Bar antes dos 25 minutos"
+}
+
+###

@@ -1,0 +1,25 @@
+﻿namespace umfg.programacaoiii.minimalapi._2026.Entidades;
+
+public sealed class Lembrete
+{
+    public Guid Id { get; private set; } = Guid.NewGuid();
+    public string Descricao { get; private set; } = string.Empty;
+    public DateTime DataCadastro { get; private set; } = DateTime.Now;
+    public DateTime DataAtualizacao { get; private set; } = DateTime.Now;
+    public bool IsAtivo { get; private set; } = true;
+
+    public Lembrete(string descricao)
+    {
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(descricao);
+        Descricao = descricao;
+    }
+
+    internal void SetDescricao(string descricao)
+    {
+        //mesma regra do construtor: uma descrição vazia no banco quebra a leitura do registro
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(descricao);
+        Descricao = descricao;
+    }
+    internal void SetAtivo(bool isAtivo) => IsAtivo = isAtivo;    
+    internal void Update() => DataAtualizacao = DateTime.Now;    
+}
